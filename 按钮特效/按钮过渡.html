@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    html,
+    body {
+      padding: 0;
+      margin: 0;
+      background: #ecf0f1;
+    }
+
+    .btn-box {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      transform: translateY(-50%);
+      text-align: center;
+    }
+
+    .btn {
+      position: relative;
+      width: 120px;
+      height: 36px;
+      border: 1px solid #3498db;
+      outline: 0;
+      background: none;
+      color: #3498db;
+      overflow: hidden;
+      transition: all 0.8s;
+      display: block;
+      margin: 10px auto;
+    }
+    .btn3,
+    .btn4 {
+      color: #fff;
+    }
+
+    .btn1::before,
+    .btn3::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      border-radius: 0 0 50% 50%;
+      transition: all 0.8s;
+      z-index: -1;
+    }
+
+    .btn2::before,
+    .btn4::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      border-radius: 50% 50% 0 0;
+      transition: all 0.8s;
+      z-index:-1;
+    }
+
+    .btn1::before,
+    .btn2::before {
+      height: 0;
+      background: #3498db;
+    }
+
+    .btn3::before,
+    .btn4::before {
+      height: 180%;
+      background: #3498db;
+    }
+
+    .btn1:hover,
+    .btn2:hover {
+      color: #fff;
+    }
+
+    .btn3:hover,
+    .btn4:hover {
+      color: #3498db;
+    }
+
+    .btn1:hover::before,
+    .btn2:hover::before {
+      height: 180%;
+      border-radius: 0 0 0 0;
+    }
+
+    .btn3:hover::before,
+    .btn4:hover::before {
+      height: 0;
+      border-radius: 0 0 0 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="btn-box">
+    <button class="btn btn1">按钮</button>
+    <button class="btn btn2">按钮</button>
+    <button class="btn btn3">按钮</button>
+    <button class="btn btn4">按钮</button>
+  </div>
+
+</body>
+
+</html>

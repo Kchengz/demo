@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>按钮渐变</title>
+  <style>
+  .btn-box{
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    width: 80vw;
+    margin:0 auto;
+  }
+  .btn{
+    transition:all 0.6s;
+    background-size:200% auto;
+    flex:1 1 auto;
+    margin:8px;
+    padding:30px;
+    border-radius: 8px;
+    font-size:16px;
+    color:#fff;
+  }
+  .btn:hover{
+    background-position:right center;
+  }
+  .btn1{
+    background-image:linear-gradient(to right,#f6d365 0%,#e74c3c 51%,#f6d365 100%)
+  }
+  .btn2{
+    background-image:linear-gradient(to right,#1abc9c 0%,#2980b9 51%,#1abc9c 100%)
+  }
+  .btn3{
+    background-image:linear-gradient(to right,#2980b9 0%,#9b59b6 51%,#2980b9 100%)
+  }
+  .btn4{
+    background-image:linear-gradient(to right,#8e44ad 0%,#3498db 51%,#8e44ad 100%)
+  }
+  .btn5{
+    background-image:linear-gradient(to right,#1abc9c 0%,#fda805 51%,#1abc9c 100%)
+  }
+  </style>
+</head>
+<body>
+  <div class="btn-box">
+    <a class="btn btn1">鼠标放上来</a>
+    <a class="btn btn2">鼠标放上来</a>
+    <a class="btn btn3">鼠标放上来</a>
+    <a class="btn btn4">鼠标放上来</a>
+    <a class="btn btn5">鼠标放上来</a>
+
+  </div>
+</body>
+</html>

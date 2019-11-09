@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    div {
+      position: relative;
+      font-size: 35px;
+      font-weight: 600;
+      color: #ccc;
+      width: 6em;
+      text-transform: uppercase;
+
+    }
+
+    div::before {
+      content: attr(data-text);
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: linear-gradient(to left,red, green, blue);
+      -webkit-background-clip: text;
+      color: transparent;
+      width: 0;
+      height: 100%;
+      overflow: hidden;
+      transition: all 1s;
+    }
+
+    div:hover::before {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div data-text="text">text</div>
+  <div data-text="skldhflkj">skldhflkj</div>
+</body>
+
+</html>
