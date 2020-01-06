@@ -1,4 +1,4 @@
-# everyday-demo
+# demo
 
 
 html，css，JavaScript的demo
